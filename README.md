@@ -69,3 +69,9 @@ git push              @Rem Push your changes in your repository
 call ng build         @Rem "call" waits for the current project to be build
 call git ftp push     @Rem Update your ftp-server
 ```
+
+## Run your "up.bat"
+
+1. Open your console
+2. Navigate to your project folder
+3. Write $up "commit message", without ""
