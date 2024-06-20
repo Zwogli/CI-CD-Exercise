@@ -2,5 +2,5 @@ git pull
 git add .               
 git commit -m "%*"      
 git push        
-ng build        
-git ftp push            
+call ng build        
+call git ftp push            
