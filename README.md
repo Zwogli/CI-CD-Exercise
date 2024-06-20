@@ -32,7 +32,7 @@ git ftp push
 # Last deployment changed to ded01b27e5c785fb251150805308d3d0f8117387.
 ```
 
-## Simple CI/CD Practice with none Framework on Windows
+## CI/CD Practice with none Framework on Windows
 
 1. Create a `up.bat` in your working-folder
 2. Open your `up.bat` file and write without @Rem:
@@ -43,4 +43,29 @@ git add .               @Rem Add all changes to your stage
 git commit -m "%*"      @Rem Write a commit message. %* is a Variable on Windows
 git push                @Rem Push your changes in your repository
 git ftp push            @Rem Update your ftp-server
+```
+
+## CI/CD Practice with Angular Framework on Windows
+
+1. Create a Angular Project
+2. Create in yout Angular Project following files:
+
+- up.bat
+- .git-ftp-include
+
+3. Edit ".git-ftp-include":
+
+```
+!./dist/ci-cd-test
+```
+
+4. Edit "up.bat"
+
+```
+git pull              @Rem Pull your Repository
+git add .             @Rem Add all changes to your stage
+git commit -m "%*"    @Rem Write a commit message. %* is a Variable on Windows
+git push              @Rem Push your changes in your repository
+call ng build         @Rem "call" waits for the current project to be build
+call git ftp push     @Rem Update your ftp-server
 ```
