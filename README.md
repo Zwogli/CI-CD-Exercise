@@ -1,4 +1,4 @@
-# CI/CD Test
+# CI/CD exercise
 
 In this particular repository I'm taking my first steps in continuous integration and continuous development, using git-ftp as well.
 
