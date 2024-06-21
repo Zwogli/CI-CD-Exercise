@@ -40,10 +40,9 @@ In the first Step you must create a command prompt file in your project. There a
 > [!IMPORTANT]
 >
 > - Linux / Mac shelsript, create a `up.sh` file in your working-folder
-> - Windows command prompt, create a `up.bat` in your working-folder
+> - Windows command prompt, create a `up.bat` file in your working-folder
 
-
-## 4. CI/CD Script
+## 3.1 Simple CI/CD script
 
 Now you can open your command prompt file to add following script:
 
@@ -67,13 +66,13 @@ git ftp push
 - $git push Push your changes in your repository
 - $git ftp push Update your ftp-server
 
-## CI/CD Practice with Angular Framework on Windows
+## 3.2 CI/CD script with Angular Framework on Windows
 
 1. Create a Angular Project
-2. Create in yout Angular Project following files:
+2. Create in your Angular Project following files:
 
-- up.bat
-- .git-ftp-includeöö
+- `up.bat` for windows, `up.sh` for Linux/Mac 
+- `.git-ftp-include`
 
 3. Edit ".git-ftp-include":
 
@@ -84,15 +83,18 @@ git ftp push
 4. Edit "up.bat"
 
 ```
-git pull              > Pull your Repository
-git add .             > Add all changes to your stage
-git commit -m "%*"    > Write a commit message. %* is a Variable on Windows
-git push              > Push your changes in your repository
-call ng build         > "call" waits for the current project to be build
-call git ftp push     > Update your ftp-server
+git pull              
+git add .             
+git commit -m "%*"    
+git push              
+call ng build
+call git ftp push     Update your ftp-server
 ```
 
-## Run your "up.bat"
+- $call ng build      "call" waits for the current project to be build
+- $call git ftp push  Update your ftp-server
+
+## 4. Run your "up.bat" or "up.sh"
 
 1. Open your console
 2. Navigate to your project folder
