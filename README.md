@@ -42,15 +42,15 @@ In the first Step you must create a command prompt file in your project. There a
 > - Linux / Mac shelsript, create a `up.sh` file in your working-folder
 > - Windows command prompt, create a `up.bat` file in your working-folder
 
-## 3.1 Simple CI/CD script
+### 3.1 Simple CI/CD script
 
 Now you can open your command prompt file to add following script:
 
 > [!IMPORTANT]
-> To create a commit message we need a variable in git commit -m "".
+> To create a commit message we need a variable in `git commit -m ""`.
 >
-> - Linux / Mac -> $git commit -m "$\*"
-> - Windows -> $git commit -m "%\*"
+> - Linux / Mac -> `$git commit -m "$\*"`
+> - Windows -> `$git commit -m "%\*"`
 
 ```
 git pull
@@ -60,13 +60,13 @@ git push
 git ftp push
 ```
 
-- $git pull Pull your Repository
-- $git add . Add all changes to your stage
-- $git commit -m "%_" Write a commit message. %_ is a Variable on Windows
-- $git push Push your changes in your repository
-- $git ftp push Update your ftp-server
+- `$git pull` Pull your Repository
+- `$git add .` Add all changes to your stage
+- `$git commit -m "%*"` Write a commit message. %_ is a Variable on Windows
+- `$git push Push` your changes in your repository
+- `$git ftp push` Update your ftp-server
 
-## 3.2 CI/CD script with Angular Framework on Windows
+### 3.2 CI/CD script with Angular Framework
 
 1. Create a Angular Project
 2. Create in your Angular Project following files:
@@ -74,13 +74,13 @@ git ftp push
 - `up.bat` for windows, `up.sh` for Linux/Mac 
 - `.git-ftp-include`
 
-3. Edit ".git-ftp-include":
+3. Edit `.git-ftp-include`:
 
 ```
 !./dist/ci-cd-test
 ```
 
-4. Edit "up.bat"
+4. Edit `up.bat`
 
 ```
 git pull              
@@ -91,11 +91,11 @@ call ng build
 call git ftp push     Update your ftp-server
 ```
 
-- $call ng build      "call" waits for the current project to be build
-- $call git ftp push  Update your ftp-server
+- `$call ng build`      "call" waits for the current project to be build
+- `$call git ftp push`  Update your ftp-server
 
 ## 4. Run your "up.bat" or "up.sh"
 
 1. Open your console
 2. Navigate to your project folder
-3. Write $up "commit message", without ""
+3. Write `$up "commit message"`, without ""
