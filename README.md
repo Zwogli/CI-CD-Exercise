@@ -136,3 +136,9 @@ ssh `"account-name"`@`"ip-address"` "cd da-services && sudo git pull && sudo ./e
 1. Open your console
 2. Navigate to your project folder
 3. Write `$up "commit message"`, without ""
+
+## 5. Alternative CI/CD tools
+
+1. Travis CI
+2. Jenkins
+3. GitLab
