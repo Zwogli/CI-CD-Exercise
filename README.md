@@ -49,8 +49,8 @@ Now you can open your command prompt file to add following script:
 > [!IMPORTANT]
 > To create a commit message we need a variable in `git commit -m ""`.
 >
-> - Linux / Mac -> `$git commit -m "$\*"`
-> - Windows -> `$git commit -m "%\*"`
+> - Linux / Mac -> `$git commit -m "$*"`
+> - Windows -> `$git commit -m "%*"`
 
 ```
 git pull
@@ -62,7 +62,7 @@ git ftp push
 
 - `$git pull` Pull your Repository
 - `$git add .` Add all changes to your stage
-- `$git commit -m "%*"` Write a commit message. %_ is a Variable on Windows
+- `$git commit -m "%*"` Write a commit message. %* is a Variable on Windows
 - `$git push Push` your changes in your repository
 - `$git ftp push` Update your ftp-server
 
@@ -71,7 +71,7 @@ git ftp push
 1. Create a Angular Project
 2. Create in your Angular Project following files:
 
-- `up.bat` for windows, `up.sh` for Linux/Mac 
+- `up.bat` for windows, `up.sh` for Linux/Mac
 - `.git-ftp-include`
 
 3. Edit `.git-ftp-include`:
@@ -83,16 +83,18 @@ git ftp push
 4. Edit `up.bat`
 
 ```
-git pull              
-git add .             
-git commit -m "%*"    
-git push              
+git pull
+git add .
+git commit -m "%*"
+git push
 call ng build
 call git ftp push     Update your ftp-server
 ```
 
-- `$call ng build`      "call" waits for the current project to be build
-- `$call git ftp push`  Update your ftp-server
+- `$call ng build` "call" waits for the current project to be build
+- `$call git ftp push` Update your ftp-server
+
+### 3.2 CI/CD script with Angular Framework
 
 ## 4. Run your "up.bat" or "up.sh"
 
