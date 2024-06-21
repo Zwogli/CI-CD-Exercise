@@ -62,7 +62,7 @@ git ftp push
 
 - `$git pull` Pull your Repository
 - `$git add .` Add all changes to your stage
-- `$git commit -m "%*"` Write a commit message. %\* is a Variable on Windows
+- `$git commit -m "%*"` Write a commit message. `%*` is a Variable on Windows
 - `$git push Push` your changes in your repository
 - `$git ftp push` Update your ftp-server
 
@@ -111,9 +111,16 @@ git add .
 git commit -m "%*"
 git push
 ssh `"account-name"`@`"ip-address"` "cd da-services && sudo git pull && sudo ./env/bin/pip install -r requirements.txt"
-
-> ssh junus@34.65.211.91 "cd da-services && sudo git pull && sudo ./env/bin/pip install -r requirements.txt"
 ```
+
+Example: `ssh janedoe@34.65.211.91 "cd da-services && sudo git pull && sudo ./env/bin/pip install -r requirements.txt"`
+
+- `ssh`: Secure shell is a Internet Protocol
+- `janedoe`: Account name
+- `34.65.211.91`: Server ip address
+- `cd da-services`: navigate to destination folder
+- `sudo git pull`: super user do ...
+- `sudo ./env/bin/pip install -r requirements.txt`: installs your development environment
 
 ## 4. Run your "up.bat" or "up.sh"
 
