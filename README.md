@@ -114,14 +114,15 @@ ssh `"account-name"`@`"ip-address"` "cd da-services && sudo git pull && sudo ./e
 ```
 
 > [!Note]
-> Example: `ssh janedoe@34.65.211.91 "cd da-services && sudo git pull && sudo ./env/bin/pip install -r requirements.txt"`
+> Example:
+> `ssh janedoe@34.65.211.91 "cd da-services && sudo git pull && sudo ./env/bin/pip install -r requirements.txt"`
 >
->- `ssh`: Secure shell is a Internet Protocol
->- `janedoe`: Account name
->- `34.65.211.91`: Server ip address
->- `cd da-services`: navigate to destination folder
->- `sudo git pull`: super user do ...
->- `sudo ./env/bin/pip install -r requirements.txt`: installs your development environment
+> - `ssh`: Secure shell is a Internet Protocol
+> - `janedoe`: Account name
+> - `34.65.211.91`: Server ip address
+> - `cd da-services`: navigate to destination folder
+> - `sudo git pull`: super user do ...
+> - `sudo ./env/bin/pip install -r requirements.txt`: installs your development environment
 
 ## 4. Run your "up.bat" or "up.sh"
 
