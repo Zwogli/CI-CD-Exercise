@@ -37,13 +37,11 @@ git ftp push
 
 In the first Step you must create a command prompt file in your project. There are differences depending on the operating system:
 
-### Linux / Mac shelscript
+> [!IMPORTANT]
+>
+> - Linux / Mac shelsript, create a `up.sh` file in your working-folder
+> - Windows command prompt, create a `up.bat` in your working-folder
 
-Create a `up.sh` in your working-folder
-
-### Windows command prompt
-
-Create a `up.bat` in your working-folder
 
 ## 4. CI/CD Script
 
@@ -51,8 +49,9 @@ Now you can open your command prompt file to add following script:
 
 > [!IMPORTANT]
 > To create a commit message we need a variable in git commit -m "".
-> - Linux / Mac -> $git commit -m "$*"
-> - Windows -> $git commit -m "%*"
+>
+> - Linux / Mac -> $git commit -m "$\*"
+> - Windows -> $git commit -m "%\*"
 
 ```
 git pull
