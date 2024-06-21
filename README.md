@@ -2,13 +2,14 @@
 
 In this particular repository I'm taking my first steps in continuous integration and continuous development, using git-ftp as well.
 
-## Git-ftp -- uploads to FTP servers the Git way
+## 1. Install git-ftp
 
-> If you use Git and you need to upload your files to an FTP server, Git-ftp can save you some time and bandwidth by uploading only those files that changed since the last upload.
+Install git-ftp Install git-ftp by following the instructions at (https://github.com/git-ftp/git-ftp/tree/master).
 
-> It keeps track of the uploaded files by storing the commit id in a log file on the server. It uses Git to determine which local files have changed.
+## 2. Git-ftp setup
 
-> You can easily deploy another branch or go back in the Git history to upload an older version.
+Follow up to the Declaration (https://github.com/git-ftp/git-ftp/tree/master).
+Below are the code snippets:
 
 ```
 # Setup
@@ -32,18 +33,40 @@ git ftp push
 # Last deployment changed to ded01b27e5c785fb251150805308d3d0f8117387.
 ```
 
-## CI/CD Practice with none Framework on Windows
+## 3. CI/CD Practice with command prompt file
 
-1. Create a `up.bat` in your working-folder
-2. Open your `up.bat` file and write without @Rem:
+In the first Step you must create a command prompt file in your project. There are differences depending on the operating system:
+
+### Linux / Mac shelscript
+
+Create a `up.sh` in your working-folder
+
+### Windows command prompt
+
+Create a `up.bat` in your working-folder
+
+## 4. CI/CD Script
+
+Now you can open your command prompt file to add following script:
+
+> [!IMPORTANT]
+> To create a commit message we need a variable in git commit -m "".
+> Linux / Mac -> $git commit -m "$_"
+> Windows -> $git commit -m "%_"
 
 ```
-git pull                @Rem Pull your Repository
-git add .               @Rem Add all changes to your stage
-git commit -m "%*"      @Rem Write a commit message. %* is a Variable on Windows
-git push                @Rem Push your changes in your repository
-git ftp push            @Rem Update your ftp-server
+git pull
+git add .
+git commit -m "%*"
+git push
+git ftp push
 ```
+
+- $git pull Pull your Repository
+- $git add . Add all changes to your stage
+- $git commit -m "%_" Write a commit message. %_ is a Variable on Windows
+- $git push Push your changes in your repository
+- $git ftp push Update your ftp-server
 
 ## CI/CD Practice with Angular Framework on Windows
 
