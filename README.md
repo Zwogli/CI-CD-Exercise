@@ -124,6 +124,13 @@ ssh `"account-name"`@`"ip-address"` "cd da-services && sudo git pull && sudo ./e
 > - `sudo git pull`: super user do ...
 > - `sudo ./env/bin/pip install -r requirements.txt`: installs your development environment
 
+### 3.3 CI/CD test workflow with gitHub
+
+1. Go to the Actions tab
+2. set up a nwe workflow
+3. commit the workflow to your remote repo
+4. pull your edit repo
+
 ## 4. Run your "up.bat" or "up.sh"
 
 1. Open your console
