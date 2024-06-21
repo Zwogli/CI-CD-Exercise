@@ -113,7 +113,8 @@ git push
 ssh `"account-name"`@`"ip-address"` "cd da-services && sudo git pull && sudo ./env/bin/pip install -r requirements.txt"
 ```
 
-Example: `ssh janedoe@34.65.211.91 "cd da-services && sudo git pull && sudo ./env/bin/pip install -r requirements.txt"`
+> [!Note]
+> Example: `ssh janedoe@34.65.211.91 "cd da-services && sudo git pull && sudo ./env/bin/pip install -r requirements.txt"`
 
 - `ssh`: Secure shell is a Internet Protocol
 - `janedoe`: Account name
