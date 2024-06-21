@@ -51,7 +51,7 @@ git ftp push            @Rem Update your ftp-server
 2. Create in yout Angular Project following files:
 
 - up.bat
-- .git-ftp-include
+- .git-ftp-includeöö
 
 3. Edit ".git-ftp-include":
 
@@ -62,12 +62,12 @@ git ftp push            @Rem Update your ftp-server
 4. Edit "up.bat"
 
 ```
-git pull              @Rem Pull your Repository
-git add .             @Rem Add all changes to your stage
-git commit -m "%*"    @Rem Write a commit message. %* is a Variable on Windows
-git push              @Rem Push your changes in your repository
-call ng build         @Rem "call" waits for the current project to be build
-call git ftp push     @Rem Update your ftp-server
+git pull              > Pull your Repository
+git add .             > Add all changes to your stage
+git commit -m "%*"    > Write a commit message. %* is a Variable on Windows
+git push              > Push your changes in your repository
+call ng build         > "call" waits for the current project to be build
+call git ftp push     > Update your ftp-server
 ```
 
 ## Run your "up.bat"
