@@ -62,7 +62,7 @@ git ftp push
 
 - `$git pull` Pull your Repository
 - `$git add .` Add all changes to your stage
-- `$git commit -m "%*"` Write a commit message. %* is a Variable on Windows
+- `$git commit -m "%*"` Write a commit message. %\* is a Variable on Windows
 - `$git push Push` your changes in your repository
 - `$git ftp push` Update your ftp-server
 
@@ -94,7 +94,26 @@ call git ftp push     Update your ftp-server
 - `$call ng build` "call" waits for the current project to be build
 - `$call git ftp push` Update your ftp-server
 
-### 3.2 CI/CD script with Angular Framework
+### 3.2 CI/CD script with via SSH
+
+We need the following points for an SSH push:
+
+1. a server on which we want to push
+2. an account for the SSH connection
+
+- Account name
+- Account password
+
+3. the server address
+
+```
+git add .
+git commit -m "%*"
+git push
+ssh `"account-name"`@`"ip-address"` "cd da-services && sudo git pull && sudo ./env/bin/pip install -r requirements.txt"
+
+> ssh junus@34.65.211.91 "cd da-services && sudo git pull && sudo ./env/bin/pip install -r requirements.txt"
+```
 
 ## 4. Run your "up.bat" or "up.sh"
 
