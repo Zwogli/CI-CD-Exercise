@@ -51,8 +51,8 @@ Now you can open your command prompt file to add following script:
 
 > [!IMPORTANT]
 > To create a commit message we need a variable in git commit -m "".
-> - Linux / Mac -> $git commit -m "$_"
-> - Windows -> $git commit -m "%_"
+> - Linux / Mac -> $git commit -m "$*"
+> - Windows -> $git commit -m "%*"
 
 ```
 git pull
